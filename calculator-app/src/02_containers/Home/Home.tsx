@@ -1,16 +1,25 @@
 import React from "react";
 import Link from "next/link";
-import router from "next/router";
+import Image from "next/image";
+import styles from "./Home.module.css";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
-      <h1>Home</h1>
-      <h2>
-        Jump to
-        <Link href="/multiplication"> Multiplication</Link>
-      </h2>
+      <div className={styles.nav}>
+        <Link href="/multiplication">Multiplication</Link>
+      </div>
+      <div className={styles.landing}>
+        <Image
+          src="/landing.png"
+          alt="landing page"
+          width={1100}
+          height={838}
+          className={styles.image}
+        />
+      </div>
     </>
   );
-}
-//src/02_containers/Multiplication/Multiplication.tsx
+};
+
+export default Home;

@@ -1,9 +1,14 @@
 import React from "react";
 
-export default function MultiplicationComponent() {
+const MultiplicationComponent: React.FC = () => {
   return (
     <>
-      <h1>Hello Multi!</h1>
+      <h1>Multiplication</h1>
+      <input type="number" />
+      <input type="number" />
+      <button>Enter</button>
     </>
   );
-}
+};
+
+export default MultiplicationComponent;

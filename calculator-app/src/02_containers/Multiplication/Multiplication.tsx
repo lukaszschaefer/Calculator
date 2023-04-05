@@ -2,10 +2,12 @@
 import React from "react";
 import MultiplicationComponent from "@/01_components/MultiplicationComponent/MultiplicationComponent";
 
-export default function Multiplication() {
+const Multiplication: React.FC = () => {
   return (
     <>
       <MultiplicationComponent />
     </>
   );
-}
+};
+
+export default Multiplication;
