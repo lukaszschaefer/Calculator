@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./MultiplicationComponent.module.css";
+import styles from "./SumComponent.module.css";
 
-const MultiplicationComponent: React.FC = () => {
+const SumComponent: React.FC = () => {
   const [number1, setNumber1] = useState<number>(0);
   const [number2, setNumber2] = useState<number>(0);
   const [result, setResult] = useState<number>();
@@ -15,31 +15,21 @@ const MultiplicationComponent: React.FC = () => {
     setNumber2(Number(event.target.value));
   };
 
-  const multiplyNumbers = () => {
-    const result = number1 * number2;
+  const sumNumbers = () => {
+    const result = number1 + number2;
     setResult(result);
     setArray((prevArray) => [...prevArray, result]);
-    console.log(result);
   };
-  console.log(array);
 
   return (
     <>
       <div className={styles.mainContent}>
-        <h1>Multiplication</h1>
+        <h1>Sum</h1>
         <div>
-          <input
-            value={number1}
-            onChange={handleNumber1Change}
-            className={styles.input}
-          />
-          <input
-            value={number2}
-            onChange={handleNumber2Change}
-            className={styles.input}
-          />
+          <input onChange={handleNumber1Change} className={styles.input} />
+          <input onChange={handleNumber2Change} className={styles.input} />
         </div>
-        <button onClick={multiplyNumbers} className={styles.button}>
+        <button onClick={sumNumbers} className={styles.button}>
           Enter
         </button>
         <p className={styles.result}>{result}</p>
@@ -57,4 +47,4 @@ const MultiplicationComponent: React.FC = () => {
   );
 };
 
-export default MultiplicationComponent;
+export default SumComponent;
