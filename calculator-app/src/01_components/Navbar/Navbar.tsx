@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
         <Link href="/subtraction">Subtraction</Link>
         <Link href="/multiplication">Multiplication</Link>
         <Link href="/division">Division</Link>
+        <Link href="/test">Test</Link>
       </nav>
     </>
   );
